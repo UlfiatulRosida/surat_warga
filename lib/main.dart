@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Surat Warga',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -30,7 +30,11 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
+fitur-profile
       home: const MyHomePage(title: 'BUDREKKKK'),
+
+      home: const MyHomePage(title: 'WELCOME TO SURAT WARGA'),
+main
     );
   }
 }
