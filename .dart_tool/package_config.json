@@ -314,7 +314,11 @@
       "languageVersion": "3.4"
     }
   ],
+<<<<<<< HEAD
   "generated": "2025-11-10T13:50:24.804098Z",
+=======
+  "generated": "2025-11-10T12:11:37.175958Z",
+>>>>>>> fitur-pengaduan
   "generator": "pub",
   "generatorVersion": "3.4.3",
   "flutterRoot": "file:///D:/flutter",
