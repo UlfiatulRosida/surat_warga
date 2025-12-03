@@ -45,6 +45,7 @@ class MyApp extends StatelessWidget {
       // tested with just a hot reload.
 
       //home: const SplashPage(),
+      home: const MyHomePage(title: 'WELCOME TO SURAT WARGA'),
     );
   }
 }
