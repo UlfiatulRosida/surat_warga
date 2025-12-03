@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:surat_warga/pages/splash_page.dart';
 import 'package:surat_warga/pages/register_page.dart';
 import 'package:surat_warga/pages/login_page.dart';
-//import 'package:surat_warga/pages/utils/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,13 +17,14 @@ class MyApp extends StatelessWidget {
       title: 'Surat Warga',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        //primarySwatch: Colors.blue,
         fontFamily: 'Raboto',
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       initialRoute: '/splash',
       routes: {
+        '/splash': (context) => const SplashPage(),
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
       },
@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
       // This works for code too, not just values: Most code changes can be
       // tested with just a hot reload.
 
-      home: const SplashPage(),
+      //home: const SplashPage(),
     );
   }
 }

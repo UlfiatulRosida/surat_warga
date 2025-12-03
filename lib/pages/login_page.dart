@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:http/http.dart' as http;
 import 'package:surat_warga/pages/register_page.dart';
-import '../services/api_service.dart';
+import 'package:surat_warga/services/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -13,7 +12,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage>
     with SingleTickerProviderStateMixin {
   final _formKey = GlobalKey<FormState>();
-  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _identityController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   bool _obscurePassword = true;
   bool _isLoading = false;
@@ -26,8 +25,8 @@ class _LoginPageState extends State<LoginPage>
   Future<void> _login() async {
     setState(() => _isLoading = true);
 
-    final result = await ApiService.login(
-      _emailController.text,
+    final result = await AuthService.login(
+      _identityController.text,
       _passwordController.text,
     );
 
@@ -80,7 +79,7 @@ class _LoginPageState extends State<LoginPage>
   @override
   void dispose() {
     _controller.dispose();
-    _emailController.dispose();
+    _identityController.dispose();
     _passwordController.dispose();
     super.dispose();
   }
@@ -200,7 +199,7 @@ class _LoginPageState extends State<LoginPage>
                         ),
                         const SizedBox(height: 6),
                         TextFormField(
-                          controller: _emailController,
+                          controller: _identityController,
                           decoration: InputDecoration(
                             hintText: 'Masukan Email',
                             filled: true,
